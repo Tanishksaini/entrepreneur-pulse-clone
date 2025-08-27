@@ -79,19 +79,18 @@ export const HeroSection = () => {
           {/* Main heading */}
           <div className="space-y-4">
             <h1 className="text-6xl md:text-8xl font-bold leading-tight">
-              <span className="text-gradient">Entrepreneur</span>
+              <span className="text-gradient">PAN IIT Rising</span>
               <br />
-              <span className="text-foreground">India 2025</span>
+              <span className="text-foreground">Rajasthan 2025</span>
             </h1>
             <div className="text-xl md:text-2xl text-muted-foreground font-medium">
-              The Ultimate Entrepreneurship Summit
+             PAN IIT Rising Rajasthan 2025
             </div>
           </div>
 
           {/* Description */}
           <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto leading-relaxed">
-            Join thousands of entrepreneurs, investors, and thought leaders at India's most prestigious 
-            business conference. Network, learn, and grow your venture to the next level.
+           Rising Rajasthan 2025 is the flagship global summit of IIT alumni in collaboration with the Government of Rajasthan.
           </p>
 
           {/* CTA Buttons */}
@@ -107,20 +106,20 @@ export const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary">500+</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary">100+</div>
               <div className="text-sm text-muted-foreground">Speakers</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary">10K+</div>
-              <div className="text-sm text-muted-foreground">Attendees</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary">2000+</div>
+              <div className="text-sm text-muted-foreground">Delegates</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary">200+</div>
-              <div className="text-sm text-muted-foreground">Exhibitors</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary">150+</div>
+              <div className="text-sm text-muted-foreground">StartUps</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary">3</div>
-              <div className="text-sm text-muted-foreground">Days</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary">100+</div>
+              <div className="text-sm text-muted-foreground">Investors & VCs</div>
             </div>
           </div>
         </div>
@@ -136,7 +135,7 @@ export const HeroSection = () => {
       {/* Ticket CTA - Fixed position */}
       <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
         <Button variant="tickets" className="rotate-90 origin-center whitespace-nowrap">
-          EI2025 TICKETS
+         Book Tickets
         </Button>
       </div>
     </section>

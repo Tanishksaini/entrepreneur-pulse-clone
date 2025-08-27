@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Users, Clock, Star, Award, Presentation, Network } from "lucide-react";
+import { motion } from "framer-motion";
 
 export const ConferenceSection = () => {
   const highlights = [
@@ -33,39 +34,36 @@ export const ConferenceSection = () => {
 
   const agenda = [
     {
-      day: "Day 1",
+      day: "Phase I",
       date: "March 15, 2025",
       sessions: [
-        { time: "9:00 AM", title: "Opening Ceremony & Welcome Address", speaker: "Conference Committee" },
-        { time: "10:30 AM", title: "The Future of Indian Startups", speaker: "Leading VCs Panel" },
-        { time: "2:00 PM", title: "Digital Transformation in Business", speaker: "Tech Industry Leaders" },
-        { time: "4:30 PM", title: "Scaling Your Startup Globally", speaker: "International Experts" }
+        { time: "7:00 AM", title: "Registrations Open", speaker: "Rajasthan-inspired stoles, tote bags, handcrafted notebooks, tea & coffee counters" },
+        { time: "9:00 – 10:00 AM ", title: "Opening Ceremony (Main Auditorium)", speaker: "Folk fusion music, inaugural addresses by IIT alumni, Chief Minister, Chief Secretary & Deputy CM. Lamp lighting & curtain-raiser AV: “Rising Rajasthan: Powered by AI, Driven by Community”." },
+        { time: "10:00 – 11:00 AM ", title: "Networking Break", speaker: "Chai, coffee, and local savories encouraging informal connections." },
       ]
     },
     {
-      day: "Day 2", 
+      day: "Phase II", 
       date: "March 16, 2025",
       sessions: [
-        { time: "9:00 AM", title: "Fintech Revolution in India", speaker: "Financial Industry Panel" },
-        { time: "11:30 AM", title: "Sustainable Business Practices", speaker: "ESG Leaders" },
-        { time: "2:00 PM", title: "Women in Entrepreneurship", speaker: "Female Founders Panel" },
-        { time: "4:30 PM", title: "AI & Machine Learning for Business", speaker: "AI Researchers" }
+        { time: "11:00 – 12:00 PM ", title: "Panel 1: AI in Healthcare", speaker: "Case studies on predictive diagnosis, rural telemedicine, robotic surgeries." },
+        { time: "12:15 – 1:15 PM ", title: "Panel 2: Governance & AI", speaker: "Policy frameworks for energy, infrastructure, skilling, and health. Rajasthan as a governance innovation lab." },
+        { time: "1:00 – 3:00 PM ", title: "Exhibition 3 + Lunch Networking", speaker: "Rajasthani delicacies and cross-table discussions." },
       ]
     },
     {
-      day: "Day 3",
+      day: "Phase III",
       date: "March 17, 2025", 
       sessions: [
-        { time: "9:00 AM", title: "Startup Pitch Competition Finals", speaker: "Selected Startups" },
-        { time: "11:30 AM", title: "Investment & Funding Strategies", speaker: "Angel Investors" },
-        { time: "2:00 PM", title: "Awards Ceremony", speaker: "Celebrity Chief Guest" },
-        { time: "4:30 PM", title: "Closing & Networking Reception", speaker: "All Attendees" }
+        { time: "3:00 – 4:00 PM", title: "Panel 3: AI & Quantum Computing for Cybersecurity & Energy", speaker: "Debate on AI’s role in combating cyber threats and cutting energy costs." },
+        { time: "4:15 – 5:15 PM", title: "Panel 4: AI Smart City & Urban Development", speaker: "Vision for Jaipur, Jodhpur, Udaipur as AI-enabled smart cities." },
+        { time: "5:15 PM ", title: "| High Tea with live music.", speaker: "" },
       ]
     }
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden dark bg-black">
       {/* Background decorations */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-32 h-32 border border-primary rounded-full"></div>
@@ -77,14 +75,13 @@ export const ConferenceSection = () => {
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4 text-primary border-primary">
             <Calendar className="w-4 h-4 mr-2" />
-            March 15-17, 2025
+            November 1, 2025
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Conference <span className="text-gradient">Overview</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Three days of intensive learning, networking, and inspiration. Join us at India's premier 
-            entrepreneurship conference featuring world-class speakers, innovative startups, and industry leaders.
+            This conclave will unite IIT alumni, global tech leaders, policymakers, investors, startups, and students to explore how AI and emerging technologies can reshape governance, business, and society.
           </p>
         </div>
 
@@ -95,8 +92,8 @@ export const ConferenceSection = () => {
               <MapPin className="w-8 h-8 text-primary mx-auto mb-4" />
               <h3 className="font-semibold mb-2">Venue</h3>
               <p className="text-sm text-muted-foreground">
-                India Expo Mart<br />
-                Greater Noida, Delhi NCR
+                Rajasthan International Centre (RIC)<br />
+                Jaipur, Rajasthan
               </p>
             </CardContent>
           </Card>
@@ -106,8 +103,8 @@ export const ConferenceSection = () => {
               <Calendar className="w-8 h-8 text-primary mx-auto mb-4" />
               <h3 className="font-semibold mb-2">Duration</h3>
               <p className="text-sm text-muted-foreground">
-                3 Days<br />
-                March 15-17, 2025
+                1 Day<br />
+                November 1, 2025
               </p>
             </CardContent>
           </Card>
@@ -117,8 +114,7 @@ export const ConferenceSection = () => {
               <Clock className="w-8 h-8 text-primary mx-auto mb-4" />
               <h3 className="font-semibold mb-2">Timing</h3>
               <p className="text-sm text-muted-foreground">
-                9:00 AM - 6:00 PM<br />
-                Daily Sessions
+                7:00 AM - 5:15 PM<br />
               </p>
             </CardContent>
           </Card>
@@ -154,7 +150,7 @@ export const ConferenceSection = () => {
 
         {/* Conference Agenda */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center mb-12">Conference Agenda</h3>
+          <h3 className="text-3xl font-bold text-center mb-12">Conference Timeline</h3>
           <div className="grid lg:grid-cols-3 gap-8">
             {agenda.map((day, dayIndex) => (
               <Card key={dayIndex} className="card-gradient border-0">
@@ -176,24 +172,104 @@ export const ConferenceSection = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="card-gradient rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold mb-4">Ready to Join Us?</h3>
-            <p className="text-lg text-muted-foreground mb-8">
-              Secure your spot at India's most impactful entrepreneurship conference. 
-              Early bird pricing available for limited time.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="coral" size="lg" className="text-lg px-8">
-                Register Now
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8">
-                Download Brochure
-              </Button>
+        {/* Parallel Tracks & Experiences */}
+        <div className="mb-20">
+          <h3 className="text-3xl font-bold text-center mb-12">Parallel Tracks & Experiences</h3>
+          <div className="space-y-12 max-w-5xl mx-auto">
+            <div className="flex items-start gap-6">
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Presentation className="w-7 h-7 text-primary" />
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-primary">Startup Pitch Arena</h4>
+                <p className="text-sm text-muted-foreground mb-1">Conference Hall 2</p>
+                <p className="text-muted-foreground">
+                  12 startups pitch (30 mins each) to VCs, accelerators, and incubators.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-6">
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Network className="w-7 h-7 text-primary" />
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-primary">Exhibition Halls 1 & 2</h4>
+                <p className="text-muted-foreground">
+                  Startup exhibits, sponsor booths, immersive demos, AI experiences.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-6">
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Users className="w-7 h-7 text-primary" />
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-primary">LAN Gaming Arena</h4>
+                <p className="text-muted-foreground">
+                  Counter Strike, Age of Empires, NFS — hostel nostalgia alive.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-6">
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Star className="w-7 h-7 text-primary" />
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-primary">Garden Playground</h4>
+                <ul className="list-disc list-inside text-muted-foreground space-y-1 mt-2">
+                  <li>Memory Wall – alumni photos and memories</li>
+                  <li>Chai Sutra Corners – IIT Delhi’s Sassi Chai, IIT Bombay’s Maddu Mess, and more iconic stalls</li>
+                  <li>Table Tennis Matches – casual alumni face-offs</li>
+                  <li>Chill Lounge + Open Mic – couches, live discussions, stand-ups</li>
+                  <li>AI Photo Pods – Pixar-style instant alumni portraits</li>
+                  <li>Beer Garden – craft brews and relaxed conversations</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
+
+        {/* Who Should Attend Section */}
+        <section className="py-16 bg-gray-900 px-6">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-10 ">Who Should Attend</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+              <div className="p-6 bg-card rounded-2xl shadow-md hover:shadow-lg transition">
+                <h3 className="text-xl font-semibold text-primary">Startups & Entrepreneurs</h3>
+                <p className="text-muted-foreground mt-2">
+                  Showcase your ideas, pitch to investors, and raise funds.
+                </p>
+              </div>
+              <div className="p-6 bg-card rounded-2xl shadow-md hover:shadow-lg transition">
+                <h3 className="text-xl font-semibold text-primary">Investors & VCs</h3>
+                <p className="text-muted-foreground mt-2">
+                  Access a curated deal flow of innovative AI startups.
+                </p>
+              </div>
+              <div className="p-6 bg-card rounded-2xl shadow-md hover:shadow-lg transition">
+                <h3 className="text-xl font-semibold text-primary">Corporates & Policymakers</h3>
+                <p className="text-muted-foreground mt-2">
+                  Explore AI-led governance frameworks and industry innovation.
+                </p>
+              </div>
+              <div className="p-6 bg-card rounded-2xl shadow-md hover:shadow-lg transition">
+                <h3 className="text-xl font-semibold text-primary">Academics & Researchers</h3>
+                <p className="text-muted-foreground mt-2">
+                  Collaborate with peers and commercialize cutting-edge ideas.
+                </p>
+              </div>
+              <div className="p-6 bg-card rounded-2xl shadow-md hover:shadow-lg transition md:col-span-2">
+                <h3 className="text-xl font-semibold text-primary">IIT Alumni & Students</h3>
+                <p className="text-muted-foreground mt-2">
+                  Network, mentor, and relive the IIT experience while embracing AI innovation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </section>
   );

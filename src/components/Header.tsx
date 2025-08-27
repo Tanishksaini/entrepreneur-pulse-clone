@@ -17,7 +17,7 @@ export const Header = () => {
     <div className="relative">
       {/* Top notification bar */}
       <div className="bg-primary text-primary-foreground text-center py-2 text-sm">
-        <span className="font-medium">⚡ Official Licensee of Entrepreneur USA</span>
+        <span className="font-medium">⚡ Official Summit of IIT Alumni </span>
         <div className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-3">
           <span className="text-xs">Follow Us:</span>
           <div className="flex gap-2">
@@ -35,11 +35,13 @@ export const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <div className="flex items-center space-x-4">
-              <div className="text-2xl font-bold">
-                <span className="text-foreground">Entrepreneur</span>
-                <div className="text-xs text-muted-foreground font-normal">2025</div>
-              </div>
+            <div className="flex items-center space-x-2">
+              <img  
+                src="/logo.jpg" 
+                alt="Logo" 
+                className="h-10 w-auto object-contain" 
+              />
+              <span className="font-bold text-lg">IIT Summit</span>
             </div>
 
             {/* Navigation */}
@@ -165,7 +167,7 @@ export const Header = () => {
                 Explore More
               </Button>
               <Button variant="tickets" size="lg" className="hidden sm:inline-flex">
-                🎟️ EI2025 Tickets
+                🎟️ Get Tickets
               </Button>
             </div>
           </div>
